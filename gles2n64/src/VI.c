@@ -81,9 +81,12 @@ void VI_UpdateSize(void)
 		depthBufferList().init();
 #endif
 	}
-
+	printf("************************************ Before **********************************\n\n");
+        printf("VI_rWidth: %d VI_rHeight: %d | VI_Width: %d VI_Height: %d\n\n",VI.rwidth,VI.rheight,VI.width, VI.height);
 	VI.rwidth = VI.width != 0 ? 1.0f / VI.width : 0.0f;
 	VI.rheight = VI.height != 0 ? 1.0f / VI.height : 0.0f;
+	printf("************************************ After **********************************\n\n");
+        printf("VI_rWidth: %d VI_rHeight: %d | VI_Width: %d VI_Height %d\n\n",VI.rwidth,VI.rheight,VI.width, VI.height);
 }
 
 void VI_UpdateScreen(void)
