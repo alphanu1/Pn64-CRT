@@ -1228,6 +1228,10 @@ void DrawPartFrameBufferToScreen(void)
    fb_info.ul_y   = part_framebuf.d_ul_y;
    fb_info.lr_y   = part_framebuf.d_lr_y;
    fb_info.opaque = 0;
+   
+   printf("*************************** Frmaebuffer Start ****************************\n\n");
+   printf("Frame buffer width: %d Frame buffer height: %d",fb_info.width,fb_info.height);
+   printf("*************************** Frmaebuffer End ****************************\n\n");
 
    DrawFrameBufferToScreen(&fb_info);
    memset(gfx_info.RDRAM + gDP.colorImage.address, 0, (gDP.colorImage.width * gDP.colorImage.height) << g_gdp.fb_size >> 1);
